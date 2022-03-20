@@ -4,26 +4,25 @@ O exemplo mostra o envio de mensagens aos responsáveis
 sobre a situação final dos alunos
 A pasta result mostra os resultados desse programa
 """
-from support import regulate, envelop
-from ..best_support import (salutation, adapt_situation, adapt_gender, adapt_result, check_dinamic_email_objects)
-from csvhelper import CsvHelper
 from best_support import *
+from support import regulate, envelop
+from csvhelper import CsvHelper
 import yagmail
 import os
 
 
 #* VARIÁVEIS DE ENTRADA
-user_email = 'example@gmail.com' # email
+user_email = 'my_email@gmail.com' # email
 password = 'password' # senha
-addressee_emails = ['example0001@gmail.com', 'example0002@gmail.com', 'example0003@gmail.com'] # destinatários
+addressee_emails = ['example@gmail.com', 'example@gmail.com', 'example@gmail.com'] # destinatários
 cc = [''] # Cópia de email - OPCIONAL
 bcc = [''] # Cópia oculta de email - OPCIONAL
 subject = 'Resultado final escolar - 2021' # Assunto
-attachments=['boletim000.png', 'boletim001.jpg', 'boletim002.jpg'] 
+attachments=['exemplo/images/boletim000.png', 'exemplo/images/boletim001.jpg', 'exemplo/images/boletim002.jpg'] 
 
 
 #* CSV VARIÁVEIS DE ENTRADA
-csv_name = 'dados'
+csv_name = 'exemplo/dados'
 headers = ['Nome', 'Situação', 'Nota', 'Gênero','Responsável']
 # as informações abaixo devem ter a mesma quantidade de dados
 nomes = ['Rafael', 'Miguel', 'Marcela']
