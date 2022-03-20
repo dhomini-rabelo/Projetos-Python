@@ -15,7 +15,7 @@ import json
 
 
 #! Variáveis de entrada
-phone_number = '99 99981 1199'
+phone_number = '99 99999 9999'
 region = 'BR'   
 
 #* Obtendo dados do número informado
@@ -24,7 +24,7 @@ initial_number_information = get_data(phone_analisys, region)
 number_information = number_analysis(phone_analisys, initial_number_information)
 
 #* Exportando em arquivo JSON 
-with open('number_information.json', 'w') as file:
+with open('number_data.json', 'w') as file:
     json.dump(number_information, file, indent=4)
         
 

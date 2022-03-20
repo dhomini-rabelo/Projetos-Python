@@ -50,8 +50,7 @@ def number_analysis(phoneobj, phone_number_information):
         city_tz = timezone.time_zones_for_number(phoneobj)
         operator = carrier.name_for_number(phoneobj, 'pt-br') 
         phone_state = geocoder.description_for_number(phoneobj, 'pt-br')
-        dt = datetime(2020, 11, 1, 1, tzinfo=ZoneInfo(city_tz[0]))
-        phone_number_information['time zone'] = f'GMT{dt.tzname()}'
+        phone_number_information['time zone'] = city_tz
         phone_number_information['Phone operator'] = operator
         phone_number_information['State'] = unidecode.unidecode(phone_state)
     return phone_number_information
