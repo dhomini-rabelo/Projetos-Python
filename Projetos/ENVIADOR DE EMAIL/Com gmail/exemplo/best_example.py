@@ -5,8 +5,7 @@ sobre a situação final dos alunos
 A pasta result mostra os resultados desse programa
 """
 from support import regulate, envelop
-from best_support import (salutation, adapt_situation, adapt_gender,
-adapt_result, check_dinamic_email_objects)
+from ..best_support import (salutation, adapt_situation, adapt_gender, adapt_result, check_dinamic_email_objects)
 from csvhelper import CsvHelper
 from best_support import *
 import yagmail
@@ -24,7 +23,7 @@ attachments=['boletim000.png', 'boletim001.jpg', 'boletim002.jpg']
 
 
 #* CSV VARIÁVEIS DE ENTRADA
-csv_name = 'escola'
+csv_name = 'dados'
 headers = ['Nome', 'Situação', 'Nota', 'Gênero','Responsável']
 # as informações abaixo devem ter a mesma quantidade de dados
 nomes = ['Rafael', 'Miguel', 'Marcela']

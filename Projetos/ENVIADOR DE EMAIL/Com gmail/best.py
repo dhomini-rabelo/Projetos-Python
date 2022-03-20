@@ -2,7 +2,7 @@
 Projeto de iniciante - Enviador de emails
 Descrição:
     Este é um programa baseado no main.py, porém melhor com 
-    filtragens otimizadas para emails
+    filtragens otimizadas para emails e usando csv
 Objetivo:
     Enviar emails em escala usando python com opção de 
     personalização para o corpo do email com uso de arquivo csv 
@@ -43,7 +43,7 @@ attachments=[''] # anexos - OPCIONAL
 
 
 #* CSV VARIÁVEIS DE ENTRADA
-csv_name = 'escola'
+csv_name = 'dados'
 headers = []
 field1 =[]
 field2 = []
